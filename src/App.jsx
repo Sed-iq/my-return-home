@@ -19,30 +19,39 @@ import Select_seat from "./components/select_seat";
 import Message from "./components/message";
 export default () => {
   return (
-    <div className="h-screen w-full sm:hidden block">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Splash />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/followers" element={<Followers />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/post" element={<Post />} />
-          <Route path="/discover" element={<Discover />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/subscribe" element={<Subs_community />} />
-          <Route path="/ticket" element={<E_ticket />} />
-          <Route path="/popular" element={<Popular_group />} />
-          <Route path="/notifications" element={<Notifications />} />
-          <Route path="/settings" element={<Profile_settings />} />
-          <Route path="/select" element={<Select_seat />} />
-          <Route path="/messages" element={<Message />} />
-          <Route path="/*" element={<Home />} />
-        </Routes>
-      </Router>
+    <div className="h-screen">
+      <div className="sm:flex bg-gray-200 h-full w-full justify-center items-center hidden">
+        <div className="flex justify-center items-center bg-white p-6 rounded-lg">
+          <p className="text-xl text-gray-600">
+            Not avalilable to PC use Mobile.
+          </p>
+        </div>
+      </div>
+      <div className="h-screen w-full sm:hidden block">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Splash />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/followers" element={<Followers />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/post" element={<Post />} />
+            <Route path="/discover" element={<Discover />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/subscribe" element={<Subs_community />} />
+            <Route path="/ticket" element={<E_ticket />} />
+            <Route path="/popular" element={<Popular_group />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/settings" element={<Profile_settings />} />
+            <Route path="/select" element={<Select_seat />} />
+            <Route path="/messages" element={<Message />} />
+            <Route path="/*" element={<Home />} />
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 };
